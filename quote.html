@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <!-- Complete the given functions such that
+When Login button is clicked, text in h1 tag should be changed to "Login Success"
+When Logout button is clicked, text in h1 tag should be changed to "Logout Success"
+Also check in dev tools for the change -->
+  <button onclick="printQuote()">Show Quote in console</button>
+  <p id="quote">Talk is cheap Show me the code</p>
+</body>
+</html>
+<script>
+  // On clicking on button, display the quote given in p tag in console
+    let pTag=document.getElementById("quote");
+    
+    function printQuote()
+    {
+        console.log(pTag.innerText);
+    }
+</script>
