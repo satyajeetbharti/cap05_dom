@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(176, 201, 164);
+        margin-top: 50px;
+    }
+    h1{
+        color: crimson;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    button{
+        height: 40px;
+        width: 86px;
+        background-color: rgb(240, 182, 180);
+        border-radius: 10%;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+    button:hover{
+        color: rgb(245, 58, 58);
+        background-color: rgb(124, 247, 124);
+        border-radius: 20%;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+    input{
+        box-shadow: rgba(243, 6, 6, 0.3) 0px 0px 0px 3px;
+        height: 40px;
+        background-color: rgb(184, 227, 228);
+        
+    }
+    span{
+        color: darkred;
+    }
+    
+</style>
+<body>
+
+    <h1>Mini <span>Calculator</span></h1>
+    <input type="number" id="inp1">
+    <input type="number" id="inp2">
+
+    <br><br><br>
+
+    <button onclick="printAdd()" id="add">Add</button>
+    <button onclick="printSubtract()" id="subtract">Subtract</button>
+    <button onclick="printMultiply()" id="multiply">Multiply</button>
+    <button onclick="printDivide()" id="divide">Divide</button>
+   
+</body>
+</html>
+<script>
+    // giving it's a globle variable
+   let input1=document.getElementById("inp1");
+   let input2=document.getElementById("inp2");
+
+    function printAdd()
+        {
+            let num1=input1.value;
+            let num2=input2.value;
+            let res=+num1 + +num2
+            alert(res);
+            
+        }
+
+        function printSubtract()
+        {
+            let num1=input1.value;
+            let num2=input2.value;
+            let res= +num1 - +num2
+            alert(res);
+            
+        }
+
+        function printMultiply()
+        {
+            let num1=input1.value;
+            let num2=input2.value;
+            let res= +num1 * +num2
+            alert(res);
+            
+        }
+
+        function printDivide()
+        {
+            let num1=input1.value;
+            let num2=input2.value;
+            let res= +num1 / +num2
+            alert(res);
+            
+        }
+    
+</script>

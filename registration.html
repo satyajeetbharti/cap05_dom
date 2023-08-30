@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<style>
+	body{
+		background-color: rgb(210, 241, 241);
+	}
+	#mainHeading{
+		color:rgb(252, 7, 7);
+		/* border: 1px; */
+		/* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+
+	}
+	span{
+		color: rgb(123, 123, 247);
+	}
+	#name,#gender, #email,#mobile {
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+		
+	}
+	button{
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	}
+	button:hover{
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		background-color: rgb(137, 243, 142);
+	}
+	
+	
+</style>
+<body>
+	
+	<h1 id="mainHeading">Registration <span>Form</span></h1>
+
+	<input type="text" name="name" id="name" placeholder="Enter Name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email" placeholder="Enter Email">
+	<input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number">
+	<hr>
+	<h1 id="dName" >NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+       
+		function showName() {
+			// Show filled name inside h1
+			let heading1=document.getElementById("dName")
+			let inputName=document.getElementById("name").value
+			heading1.innerText=inputName;
+		}
+
+        
+		function showGender() {
+			// Show the selected gender inside h2
+			let heading2=document.getElementById("dGender")
+			let selectGender=document.getElementById("gender").value
+			heading2.innerText=selectGender;
+            
+		}
+
+    
+		function showEmail() {
+			// Show the filled email inside h3
+			let heading3=document.getElementById("dEmail")
+            let emailData= document.getElementById("email").value
+			heading3.innerText=emailData;
+		}
+
+
+		function showMobile() {
+			// Show the filled mobile inside h4
+			let heading4=document.getElementById("dMobile")
+			let mobileForm=document.getElementById("mobile").value
+            heading4.innerText=mobileForm;
+		}
+
+		function resetForm() {
+			// Reset all the form elements to default values (blank "")
+			document.getElementById("name").value=""
+			document.getElementById("gender").value=""
+			document.getElementById("email").value=""
+			document.getElementById("mobile").value=""
+            
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+			document.getElementById("dName")
+			document.getElementById("dGender")
+			document.getElementById("dEail")
+			document.getElementById("dMobile")
+		}
+	</script>
+</body>
+</html>
